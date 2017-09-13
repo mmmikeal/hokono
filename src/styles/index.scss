@@ -463,20 +463,72 @@ a {
 
 		.like-buttton {
 			@extend .col-box-center;
+			background: transparent;
 			border: none;
 			box-shadow: none;
-			margin-left: 0px;
-			padding-left: 0px;
-
+			margin: 20px;
+			padding: 0px;
+			height: 100px;
+			width: 100px;
+			overflow: hidden;
 			img {
-				height: 28px;
-				width: 28px;
+				margin-left: 2800px;
+
+				//margin-left: -2800px;
+		    //background-image: url(./web_heart_animation_edge.png);
+				animation-fill-mode: forwards;
+		    //transform: translateY(-35px);
+
+				&:hover {
+					//animation: play 1.3s steps(28) 1 normal forwards;
+				};
+			}
+
+			&:hover > img {
+				animation: play 1s steps(28) 1 normal forwards;
+			}
+			@keyframes play {
+   			from { margin-left:    2800px; }
+     		to { margin-left: -2800px; }
 			}
 		}
-
 		margin-bottom: 10px;
 	}
 
+/*
+@keyframes lll {
+	0% {background-position: -135px -35px;}
+	3.44% {background-position: -235px -35px;}
+	6.90% {background-position: -335px -35px;}
+	10.34% {background-position: -435px -35px;}
+	13.78% {background-position: -535px -35px;}
+	17.22% {background-position: -635px -35px;}
+	20.66% {background-position: -735px -35px;}
+	24.1% {background-position: -835px -35px;}
+	27.54% {background-position: -935px -35px;}
+	31% {background-position: -1035px -35px;}
+	34.5% {background-position: -1135px -35px;}
+	37.95% {background-position: -1235px -35px;}
+	41.4% {background-position: -1335px -35px;}
+	44.85% {background-position: -1435px -35px;}
+	48.3% {background-position: -1535px -35px;}
+	51.75% {background-position: -1635px -35px;}
+	55.2% {background-position: -1735px -35px;}
+	58.65% {background-position: -1835px -35px;}
+	62% {background-position: -1935px -35px;}
+	65.5% {background-position: -2035px -35px;}
+	69% {background-position: -2135px -35px;}
+	72.45% {background-position: -2235px -35px;}
+	75.9% {background-position: -2335px -35px;}
+	79.35% {background-position: -2435px -35px;}
+	82.8% {background-position: -2535px -35px;}
+	86.25% {background-position: -2635px -35px;}
+	89.7% {background-position: -2735px -35px;}
+	93.15% {background-position: -2835px -35px;}
+	96.6% {background-position: -2935px -35px;}
+	100% {background-position: -3035px -35px;}
+
+}*/
 
 	.description {
 		margin: 30px;

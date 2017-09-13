@@ -6,6 +6,7 @@ import {
   ShareCounts,
   generateShareIcon
 } from 'react-share';
+import hearty from '../styles/web_heart_animation_edge.png';
 const { FacebookShareButton } = ShareButtons;
 const { FacebookShareCount } = ShareCounts;
 const FacebookIcon = generateShareIcon('facebook');
@@ -79,9 +80,11 @@ export default class PetPost extends React.Component {
             }}
           >
             <img
-              src={!!this.state.post.likedBy ? !!this.state.post.likedBy[this.state.auth.uid] ? '/images/full-heart.png' : '/images/heart.png' : '/images/heart.png'}
+              className="heart-animation"
+              src={!!this.state.post.likedBy ? !!this.state.post.likedBy[this.state.auth.uid] ? '/images/web_heart_animation_edge.png' : '/images/heart.png' : '/images/heart.png'}
               alt=""
             />
+            {/*<div class="HeartAnimation"></div>*/}
           </button>
           <FacebookShareButton url={`https://hokono-90da1.firebaseapp.com/pet/${this.state.petId}/post/${this.state.postId}`} title={this.state.name} quote={this.state.post.description}>
             <FacebookIcon size={32} round/>
